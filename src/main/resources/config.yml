@@ -1,0 +1,49 @@
+# KeyWithdraw Configuration
+# Author: kingrbxd
+
+# Plugin prefix for messages
+prefix: "&8[&#ff9500KeyWithdraw&8] "
+
+# Messages
+messages:
+  no-permission: "&cYou don't have permission to use this command."
+  player-only: "&cThis command can only be used by players."
+  invalid-amount: "&cPlease enter a valid amount greater than 0."
+  not-enough-keys: "&cYou don't have enough keys. You have &e%current_keys% &c%key_name% keys."
+  keys-withdrawn: "&aSuccessfully withdrawn &e%amount% %key_name% &akeys."
+  key-received: "&#2196F3You have received &e%amount% %key_name% &#2196F3keys!"
+  invalid-key: "&cThe key &e%key_name% &cdoesn't exist."
+  inventory-full: "&#FF9800Your inventory is full, some vouchers were dropped on the ground."
+
+  # Admin messages
+  admin:
+    key-created: "&#4CAF50Successfully created key type: &e%key_name%"
+    key-deleted: "&#F44336Successfully deleted key type: &e%key_name%"
+    key-exists: "&cA key with the name &e%key_name% &calready exists."
+    key-not-exists: "&cA key with the name &e%key_name% &cdoesn't exist."
+    reloaded: "&#9C27B0Configuration reloaded successfully."
+
+# Default key voucher settings (used when creating new keys)
+default-key-settings:
+  name: "&#FFD700%name% Key"
+  material: "TRIPWIRE_HOOK"
+  lore:
+    - "&8&m------------------"
+    - "&#FFD700Amount: &f1"
+    - "&#FFD700Key: &fExample"
+    - "&8&m------------------"
+    - "&f"
+    - "&#757575&o(( Right click to redeem voucher ))"
+  glow: true
+
+# Crates command settings
+crates:
+  # Command format for taking keys from a player
+  # Use %player%, %key%, and %amount% as placeholders
+  take-command: "crates key take %player% %key% %amount%"
+  # Command format for giving keys to a player
+  # Use %player%, %key%, and %amount% as placeholders
+  give-command: "crates key give %player% %key% %amount%"
+
+# Debug mode
+debug: false

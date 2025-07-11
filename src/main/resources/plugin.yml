@@ -1,0 +1,30 @@
+name: KeyWithdraw
+version: 5.0-STABLE
+main: com.kingrbxd.keywithdraw.KeyWithdrawPlugin
+api-version: 1.21
+author: kingrbxd
+description: A plugin to withdraw crate keys as vouchers
+depend: [PlaceholderAPI]
+softdepend: [ExcellentCrates]
+
+commands:
+  withdrawkeys:
+    description: Withdraw keys as vouchers
+    aliases: [wk]
+    usage: /withdrawkeys <keyname> <amount>
+  adminwithdrawkeys:
+    description: Admin commands for key withdraw
+    aliases: [awk]
+    usage: /adminwithdrawkeys <create|delete|reload> [keyname]
+
+permissions:
+  keywithdraw.use:
+    description: Allows players to use the /withdrawkeys command
+    default: true
+  keywithdraw.admin:
+    description: Allows access to all admin commands
+    default: op
+    children:
+      keywithdraw.admin.create: true
+      keywithdraw.admin.delete: true
+      keywithdraw.admin.reload: true
