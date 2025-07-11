@@ -2,7 +2,7 @@
 
  KeysWithdraw is a lightweight, feature rich and highly customizable keyswithdraw plugin made for ExcellentCrates.
  
- Commands:
+ ## Commands:
   withdrawkeys:
     description: Withdraw keys as vouchers
     aliases: [wk]
@@ -12,7 +12,7 @@
     aliases: [awk]
     usage: /adminwithdrawkeys <create|delete|reload> [keyname]
 
-Permissions:
+## Permissions:
   keywithdraw.use:
     description: Allows players to use the /withdrawkeys command
   keywithdraw.admin 
